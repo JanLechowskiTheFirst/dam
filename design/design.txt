@@ -1,0 +1,47 @@
+Scenariusze:
+
+I.
+1. Woda ma 25 metró lub mniej
+2. Otworz obie dolne klapy o x centymetrow aby przeplyw byl 0.9 m3/s
+3. Jeśli przepływ jest wiekszy niz 0.9 m3/s zamknij klapy o x cenrymetrow
+    3a. Jesli przepyw jest mniejszy niz 0.9 m3/s otworz klapy o x centrymetrow
+
+
+II.
+1. Jeśli woda ma więcej niż 25 metrów i przyrost wysokości jest dodatni
+2. Otwórz klapy o x centymetrow wiecej, aby zredukowac wysokosc lutra wody
+3. Jesli przyrost zaczyna spadac, przywroc klapy do ustawienia 0.9 m3/s
+
+
+
+Dane zapory w Sieniawie (ktora symuluje):
+
+wysokosc zapory: 38m
+szerokosc: ok 8.5 metra
+powierzchnia 131 hektarów
+pojemności 15,4 mln m3
+średni przeplyw 2,5 m3/s
+minimalny do podrzymania zycia: 0.9m3/s
+
+10 m średnia głębokość
+masymalny upust 450 m3/sekundę
+
+Pojemność maksymalna - 13,71 mln m3
+pojemność powodziowa - 4,74 mln m3
+Pojemność wyrównawcza - 7,77 mln m3
+Pojemność martwa - 1,20 mln m3
+
+Wielkości przepływów charakterystycznych w profilu zapory:
+Przepływ powodziowy 10 letni (p=10 %) - 156 m3/s
+Przepływ powodziowy 100 letni (p=1 %) - 300 m3/s
+Przepływ powodziowy 1000 letni (p=0,1 %) - 439 m3/s
+Przepływ nieszkodliwy - 30 m3/s
+
+Przelew powierzchniowy typ Creagera – dwa światła o przekroju 11,20 m x 2,60 m zamykane klapami o wysokości 2,60 m sterowanymi napędami hydraulicznymi
+Spusty denne o przekroju prostokątnym - dwa światła o wymiarach 1,50 m x 1,80 m zamykane zasuwami stalowymi płaskimi o napędzie hydraulicznym
+
+
+
+
+Przepyw wody w przekrojach kwadratowych:
+
