@@ -22,34 +22,28 @@ public class TheDanApplication {
 
 
 		SpringApplication.run(TheDanApplication.class, args);
-		int counter = 0;
-		for(args: String[] array){
-
-		}
-		// odpal tyle me metod ponizej, ile jest dlugosc tablicy arg
-
-
-		if (!args[0].equals(null)) {
-			verticalCenterOfGravity = parseBigDecimal(args[0]);
-		}
-		if (!args[1].equals(null)) {
-			releaseMechanismPosition = parseBigDecimal(args[1]);
-		}
-		if (!args[2].equals(null)) {
-			hight = parseBigDecimal(args[2]);
-		}
-		if (!args[3].equals(null)) {
-			waterLevel = parseBigDecimal(args[3]);
-		}
-		if (!args[4].equals(null)) {
-			waterRaiseFallRatio = parseBigDecimal(args[4]);
+		for(int conter = 0; conter < args.length; conter++){
+			if (!args[0].equals(null)) {
+				verticalCenterOfGravity = parseBigDecimal(args[0]);
+			}
+			if (!args[1].equals(null)) {
+				releaseMechanismPosition = parseBigDecimal(args[1]);
+			}
+			if (!args[2].equals(null)) {
+				hight = parseBigDecimal(args[2]);
+			}
+			if (!args[3].equals(null)) {
+				waterLevel = parseBigDecimal(args[3]);
+			}
+			if (!args[4].equals(null)) {
+				waterRaiseFallRatio = parseBigDecimal(args[4]);
+			}
 		}
 
-
-		(new Thread(new ZbiornikBesko())).start();
 
 		TamaBesko tama = new TamaBesko(waterLevel, verticalCenterOfGravity, hight, releaseMechanismPosition);
-		AbstractZbiornik zbiornik = new ZbiornikBesko(waterLevel, waterRaiseFallRatio);
+		(new Thread(new ZbiornikBesko(waterLevel, waterRaiseFallRatio))).start();
+
 	}
 
 }
