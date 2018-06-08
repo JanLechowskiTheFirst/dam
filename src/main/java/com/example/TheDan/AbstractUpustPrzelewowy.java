@@ -2,8 +2,6 @@ package com.example.TheDan;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 import static java.lang.StrictMath.sqrt;
@@ -44,14 +42,11 @@ public abstract class AbstractUpustPrzelewowy extends AbstractUpust{
         return Objects.hash(Integer.parseInt(flow.toString()),  Integer.parseInt(releaseMechanismPosition.toString()), Integer.parseInt(verticalCenterOfGravity.toString()), Integer.parseInt(horizontalCenterOfGravity.toString()),  Integer.parseInt(width.toString()),  Integer.parseInt(currentWaterHight.toString()));
     }
 
-    @Override
-
-
-    public BigDecimal getCurrentWaterMediumPressureAtRelease(BigDecimal verticalCenterOfGravity, BigDecimal hight, BigDecimal releaseMechanismPosition){
+    public BigDecimal getCurrentWaterMediumPressureAtRelease(BigDecimal verticalCenterOfGravity, BigDecimal waterHight , BigDecimal hight, BigDecimal releaseMechanismPosition){
         if(releaseMechanismPosition.equals(null)){
-            return verticalCenterOfGravity;};
+            return verticalCenterOfGravity.add(waterHight);};
         BigDecimal half = new BigDecimal("0.5");
-        return (verticalCenterOfGravity.subtract(half.multiply(hight).add(releaseMechanismPosition)));
+        return (verticalCenterOfGravity.subtract(half.multiply(hight).add(releaseMechanismPosition))).add(waterHight);
     }
 
     public BigDecimal flowAtAHightsApproximationForCalculations(AbstractUpust upust, BigDecimal waterHight, BigDecimal releaseMechanismPosition){

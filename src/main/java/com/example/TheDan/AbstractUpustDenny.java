@@ -24,12 +24,12 @@ public abstract class AbstractUpustDenny extends AbstractUpust {
     }
 
 
-    public BigDecimal getCurrentWaterMediumPressureAtRelease(BigDecimal verticalCenterOfGravity, BigDecimal hight, BigDecimal releaseMechanismPosition){
+    public BigDecimal getCurrentWaterMediumPressureAtRelease(BigDecimal verticalCenterOfGravity, BigDecimal waterHight, BigDecimal hight, BigDecimal releaseMechanismPosition){
        if(!releaseMechanismPosition.equals(null)){
-            return verticalCenterOfGravity;
+            return verticalCenterOfGravity.add(waterHight);
     }
         BigDecimal half = new BigDecimal("0.5");
-        return (verticalCenterOfGravity.subtract(half.multiply(hight)).add(releaseMechanismPosition));
+        return (verticalCenterOfGravity.subtract(half.multiply(hight))).add(waterHight);
 
     }
 
@@ -51,7 +51,7 @@ public abstract class AbstractUpustDenny extends AbstractUpust {
 
 
     }
-    public BigDecimal getCurrentFlowRatio(AbstractUpust upust, BigDecimal waterHight, BigDecimal verticalPosition, BigDecimal hight, BigDecimal releaseMechanismPosition){
+    public BigDecimal getCurrentFlowRatio(AbstractUpust upust, BigDecimal verticalPosition, BigDecimal hight, BigDecimal releaseMechanismPosition){
         BigDecimal waterHights = getCurrentWaterMediumPressureAtRelease(releaseMechanismPosition, verticalPosition, hight);
         return flowAtAHightsApproximationForCalculations(upust, waterHights, releaseMechanismPosition);
     }

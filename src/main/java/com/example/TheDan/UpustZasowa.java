@@ -18,7 +18,7 @@ public abstract class UpustZasowa extends AbstractUpustDenny {
     public UpustZasowa(BigDecimal postion, BigDecimal verticalHight, BigDecimal hight, BigDecimal releaseMechanismPosition) {
         setHorizontalPositionOfCenterOfGravityWithRelationToDamWidth(verticalHight);
         BigDecimal waterHights = getCurrentWaterMediumPressureAtRelease(verticalHight, hight, releaseMechanismPosition);
-        getCurrentFlowRatio(this, waterHights, verticalHight, hight, releaseMechanismPosition);
+        getCurrentFlowRatio(this, waterHights, verticalHight, hight);
     }
 
     @Override
